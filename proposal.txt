@@ -1,0 +1,58 @@
+Project Proposal: Global Recipe Explorer
+By Ethem Deli – WDD 330 course 
+Overview
+Global Recipe Explorer is a web application designed to help users discover and explore recipes from around the world. By integrating culinary delights with cultural insights, the platform aims to provide users with a rich and engaging experience that combines gastronomy with global awareness.
+Target Audience
+This application is intended for:
+•	Home Cooks & Food Enthusiasts: Individuals seeking to diversify their cooking repertoire with international recipes.
+•	Cultural Explorers: Users interested in learning about different cultures through their cuisines.
+•	Health-Conscious Individuals: Those looking to find recipes that meet specific dietary needs or nutritional goals.
+Major Functions
+1.	Recipe Search & Browse: Search recipes by name, ingredients, or cuisine.
+2.	Filter by Dietary Requirements: Filter recipes based on preferences like vegetarian, gluten-free, etc.
+3.	Bookmark Favorites: Save favorite recipes for quick access.
+4.	Nutritional Information Display: View detailed nutritional data for each recipe.
+5.	Country Facts Integration: Display interesting facts about the country of origin for each recipe.
+6.	Weekly Recipe Generator: Curate and present a weekly selection of recipes.
+7.	Responsive Design: Ensure accessibility and usability on both desktop and mobile devices.
+8.	Interactive UI Elements: Use animations and engaging design elements to enhance user interaction.
+ 
+Wireframes
+                              
+External Data
+•	Spoonacular API: To fetch recipes, ingredients, and nutritional information.
+•	REST Countries API: To retrieve country-specific data like flags, population, and cultural facts.
+Data Storage
+•	Local Storage: To save bookmarked recipes and user preferences (e.g., dietary filters or favorite cuisines).
+Module List
+•	Search Module: Handles user input and recipe lookup.
+•	Recipe Display Module: Shows selected recipe details and steps.
+•	Nutrition Module: Presents nutritional breakdowns of recipes.
+•	Favorites Module: Manages bookmarked recipes.
+•	Country Info Module: Fetches and displays country data for each recipe.
+•	Weekly Generator Module: Suggests a weekly set of recipes based on user preferences or season.
+•	User Interface Module: Manages layout, responsiveness, and animations.
+•	API Integration Module: Handles communication with external APIs (Spoonacular, REST Countries).
+Graphic Identity
+•	Color Scheme: Earthy tones such as olive green, terracotta, and beige to evoke a natural, global, and organic aesthetic.
+•	Typography: Use of Roboto for clean body text and Playfair Display for headings to combine readability with elegance.
+•	Application Icon: A stylized globe with a fork and spoon crossed over it, representing world cuisine.
+Timeline (Weeks 5–7)
+(more details in trello board)
+Week 5
+•	Finalize wireframes and overall UI design.
+•	Set up project structure and integrate initial endpoints from Spoonacular and REST Countries APIs.
+Week 6
+•	Develop core modules: search, recipe display, nutrition, and country info.
+•	Implement responsive layout and UI interactions.
+Week 7
+•	Finalize remaining modules including favorites and weekly generator.
+•	Perform full testing on devices.
+•	Deploy application and prepare for final presentation.
+Project Planning
+You can view detailed tasks and progress on the Trello board:
+🔗 Global Recipe Explorer – Trello Board
+Challenges
+•	API Rate Limits: Careful handling of Spoonacular’s and REST Countries' rate limits.
+•	Data Consistency: Ensuring accurate and complete data from both APIs.
+•	Responsive Design: Achieving fluid and visually consistent behavior across screen sizes.

@@ -1,0 +1,54 @@
+1. Movie Night Planner
+It enables users to discover movies and plan a movie night with friends or family.
+Features:
+• Discover movies by genre, rating, or actor
+• View trailers and ratings
+• Add movies to watch list
+• Share movie night plans with friends
+• get reminder for movie time
+3rd-party APIs:
+• TMDB API (The Movie Database) – movie data
+• YouTube Data API – fetch trailers
+Reason to choose this:
+All humans love movies, and it is fun to build something that people will use. It also teaches us how to handle media, user input, and API integration.
+
+2. Global Recipe Explorer
+It enables users to explore recipes from around the world. Filter by country, ingredients, or dietary requirements to try a different meal.
+Features:
+•Search and browse recipes
+•Bookmark favorite meals
+•Show nutritional information
+•Learn interesting facts about the dish's country of origin
+• weekly recipe generator for cooking
+3rd-party APIs:
+• Spoonacular API – recipes & nutrition
+• REST Countries API – country facts & flags
+Why choose this:
+Perfect for all the foodies and culture enthusiasts out there. We will be implementing dynamic filtering, designing UI, and dealing with complex JSON responses.
+3. Learn a Word a Day (Language Learning App)
+What it does is users get a new word or phrase in a chosen language every day along with pronunciation and an example sentence.
+Features:
+• Daily word or phrase notifications
+• Pronunciation audio
+• Flashcard mode to revisit old words
+• Language selector
+• Word guess game
+3rd-party APIs:
+• WordsAPI or Free Dictionary API – definitions & examples
+• Voice RSS Text-to-Speech API – pronunciation
+Why choose this:
+Educational, small, and handy. Improves your skills while enhancing your portfolio. Text-to-speech and audio playback make it interactive.
+
+4. Dely Game Discovery Hub
+Find trending or underhyped indie games with ratings, screenshots, and developer information for game enthusiast
+Features:
+• Filter by genre or platform
+• Game information with screenshots
+• Add games to a wishlist
+• Display developer information
+• track the played games and times
+3rd-party APIs:
+• RAWG Video Games Database API – game information
+• IGDB (Internet Game Database) – more information (needs Twitch developer account)
+Why pick this:
+Gaming is a large industry, and this helps you to play with an entertaining niche. You'll be working with media, filtering, pagination1, and user interaction.
