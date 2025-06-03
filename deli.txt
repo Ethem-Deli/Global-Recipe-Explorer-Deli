@@ -1,0 +1,37 @@
+to add directory files 
+mkdir data notebooks src tests
+
+to add read me file
+echo "# Global Recipe Explorer" > README.md
+***********************************************
+create init
+type nul > src\__init__.py
+
+create virtual environment
+python -m venv venv
+if fails check version
+python --version
+
+activate the venv
+venv\Scripts\activate.bat
+
+to open notepad
+notepad requirements.txt
+
+save this in notepad
+flask
+requests
+pandas
+numpy
+jupyter
+save and close the notepad
+then pip install -r requirements.txt
+
+notepad app.py
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello from Global Recipe Explorer!"
