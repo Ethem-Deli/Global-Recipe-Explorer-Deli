@@ -1,5 +1,5 @@
 import random
-from search import search_recipes
+from src.search import search_recipes
 
 def generate_weekly_recipes(preference=None):
     recipes = search_recipes(preference or "dinner")

@@ -16,6 +16,8 @@
   </header>
 
   <main>
+    <a href="#" class="modal-link" data-recipe-id="{{ recipe.id }}">Quick View</a>
+
     {% if query %}
       <h2>Results for "{{ query }}"</h2>
       <div class="recipes">
@@ -32,7 +34,18 @@
       <p>Search for recipes to explore global cuisines.</p>
     {% endif %}
   </main>
-
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  
+  <button class="bookmark-btn" data-recipe-id="{{ recipe.id }}" data-title="{{ recipe.title }}" data-image="{{ recipe.image }}">❤️ Bookmark</button>
+  
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bookmark.js') }}"></script>  
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </html>

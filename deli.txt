@@ -36,3 +36,7 @@ app = Flask(__name__)
 def home():
     return "Hello from Global Recipe Explorer!"
 Initial project structure setup
+
+
+venv\Scripts\activate
+flask run
