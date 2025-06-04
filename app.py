@@ -1,7 +1,40 @@
-from flask import Flask
+from flask import Flask, render_template, request, redirect, url_for
+from src.search import search_recipes
+from src.recipe_display import get_recipe_details
+from src.favorites import load_favorites, add_to_favorites
+from src.country_info import get_country_facts
+from src.weekly_generator import generate_weekly_recipes
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    return "Hello from Global Recipe Explorer!"
+    query = request.args.get('q')
+    recipes = search_recipes(query) if query else []
+    return render_template('index.html', query=query, results=recipes)
+
+@app.route('/recipe/<int:recipe_id>')
+def recipe_detail(recipe_id):
+    recipe = get_recipe_details(recipe_id)
+    country_name = recipe.get('cuisines', [''])[0] or "Unknown"
+    country_info = get_country_facts(country_name)
+    return render_template('recipe_detail.html', recipe=recipe, country=country_info)
+
+@app.route('/favorites')
+def favorites():
+    favs = load_favorites()
+    return render_template('favorites.html', favorites=favs)
+
+@app.route('/add_favorite/<int:recipe_id>')
+def add_favorite(recipe_id):
+    recipe = get_recipe_details(recipe_id)
+    add_to_favorites(recipe)
+    return redirect(url_for('favorites'))
+
+@app.route('/weekly')
+def weekly():
+    weekly_recipes = generate_weekly_recipes()
+    return render_template('weekly.html', recipes=weekly_recipes)
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -35,3 +35,4 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return "Hello from Global Recipe Explorer!"
+Initial project structure setup

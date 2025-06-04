@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ recipe.title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>{{ recipe.title }}</h1>
+    <a href="{{ url_for('add_favorite', recipe_id=recipe.id) }}">❤️ Add to Favorites</a>
+  </header>
+  <main>
+    <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+    <h2>Ingredients</h2>
+    <ul>
+      {% for item in recipe.extendedIngredients %}
+      <li>{{ item.original }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Instructions</h2>
+    <p>{{ recipe.instructions | safe }}</p>
+
+    <h3>Nutritional Info</h3>
+    <ul>
+      {% for key, value in recipe.nutrition.items() %}
+      <li>{{ key }}: {{ value }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Country Info: {{ country.name }}</h3>
+    <img src="{{ country.flag }}" alt="Flag of {{ country.name }}" width="80">
+    <p>Population: {{ country.population }}</p>
+    <p>Region: {{ country.region }}</p>
+  </main>
+</body>
+</html>

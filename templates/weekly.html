@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Plan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header><h1>📅 Weekly Recipe Plan</h1></header>
+  <main class="recipes">
+    {% for recipe in recipes %}
+    <div class="recipe-card">
+      <h3>{{ recipe.title }}</h3>
+      <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+      <a href="{{ url_for('recipe_detail', recipe_id=recipe.id) }}">View Details</a>
+    </div>
+    {% endfor %}
+  </main>
+</body>
+</html>
