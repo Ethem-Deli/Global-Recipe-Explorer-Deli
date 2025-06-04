@@ -44,7 +44,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 # Load your API key from env or config
-SPOONACULAR_API_KEY = os.getenv('SPOONACULAR_API_KEY') or 'your_api_key_here'
+SPOONACULAR_API_KEY = os.getenv('SPOONACULAR_API_KEY') or 'f39143f6af2943898e57538f2d6d3de2'
 
 @app.route('/api/recipe/<int:recipe_id>')
 def get_recipe_details(recipe_id):

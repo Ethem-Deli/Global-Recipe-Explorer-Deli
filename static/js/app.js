@@ -1,1 +1,2 @@
-console.log("Global Recipe Explorer is ready!");
+console.log("Global Recipe Explorer is ready!");    
+ 

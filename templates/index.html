@@ -16,8 +16,6 @@
   </header>
 
   <main>
-    <a href="#" class="modal-link" data-recipe-id="{{ recipe.id }}">Quick View</a>
-
     {% if query %}
       <h2>Results for "{{ query }}"</h2>
       <div class="recipes">
@@ -25,8 +23,17 @@
           <div class="recipe-card">
             <h3>{{ recipe.title }}</h3>
             <img src="{{ recipe.image }}" alt="{{ recipe.title }}" />
-            <p>ID: {{ recipe.id }}</p>
-            <!-- Add "More Info" button in future -->
+            
+            <!-- Quick View modal trigger -->
+            <a href="#" class="modal-link" data-recipe-id="{{ recipe.id }}">Quick View</a>
+
+            <!-- Bookmark button -->
+            <button class="bookmark-btn"
+                    data-recipe-id="{{ recipe.id }}"
+                    data-title="{{ recipe.title }}"
+                    data-image="{{ recipe.image }}">
+              ❤️ Bookmark
+            </button>
           </div>
         {% endfor %}
       </div>
@@ -34,18 +41,19 @@
       <p>Search for recipes to explore global cuisines.</p>
     {% endif %}
   </main>
+
+  <!-- Modal Structure -->
   <div id="recipeModal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
       <div id="modal-body"></div>
     </div>
   </div>
-  
-  <button class="bookmark-btn" data-recipe-id="{{ recipe.id }}" data-title="{{ recipe.title }}" data-image="{{ recipe.image }}">❤️ Bookmark</button>
-  
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
   <script src="{{ url_for('static', filename='js/bookmark.js') }}"></script>  
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
 </html>
